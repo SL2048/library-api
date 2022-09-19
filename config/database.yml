@@ -17,6 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: <%= ENV["LIBRARY_API_DATABASE_USERNAME"] %>
+  password: <%= ENV["LIBRARY_API_DATABASE_PASSWORD"] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -82,5 +84,3 @@ test:
 production:
   <<: *default
   database: library_api_production
-  username: library_api
-  password: <%= ENV["LIBRARY_API_DATABASE_PASSWORD"] %>
