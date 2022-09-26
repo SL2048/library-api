@@ -7,7 +7,7 @@ RSpec.describe Section, type: :model do
 
   context 'validations' do
     it { is_expected.to validate_presence_of(:name) }
-    it { is_expected.to validate_presence_of(:from_bookcase_code }
-    it { is_expected.to validate_presence_of(:to_bookcase_code }
+    it { is_expected.to validate_presence_of(:from_bookcase_code) }
+    it { is_expected.to validate_presence_of(:to_bookcase_code) }
   end
 end
