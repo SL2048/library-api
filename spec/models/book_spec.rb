@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Book, type: model do
+RSpec.describe Book, type: :model do
   context 'associations' do
     it { is_expected.to belong_to(:section) }
     it { is_expected.to have_many(:inventories) } 
